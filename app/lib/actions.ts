@@ -30,12 +30,13 @@ export async function createInvoice(formData: FormData) {
       INSERT INTO invoices (customer_id, amount, status, date)
       VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
     `;
-    revalidatePath('/dashboard/invoices');
-    redirect('/dashboard/invoices');
   }
   catch (e) {
     console.log(e)
   }
+
+  revalidatePath('/dashboard/invoices');
+  redirect('/dashboard/invoices');
 }
 
 // Use Zod to update the expected types
