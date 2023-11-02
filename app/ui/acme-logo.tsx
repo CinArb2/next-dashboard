@@ -4,10 +4,10 @@ import { inter } from '@/app/ui/fonts';
 export default function AcmeLogo() {
   return (
     <div
-      className={`${inter.className} flex flex-row items-center leading-none text-white`}
+      className={`${inter.className} flex flex-row items-center leading-none py-3`}
     >
-      <GlobeAltIcon className="h-12 w-12 rotate-[15deg]" />
-      <p className="text-[44px]">Acme</p>
+      <GlobeAltIcon className="bg-gray-50 h-8 rotate-[15deg]" />
+      <p className="text-[25px]">Acme</p>
     </div>
   );
 }
